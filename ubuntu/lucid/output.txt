@@ -1,0 +1,149 @@
+Step 0 : FROM ubuntu:lucid
+ ---> 3db9c44f4520
+Step 1 : RUN apt-get clean --force-yes -y
+ ---> Using cache
+ ---> 6c51faca81a7
+Step 2 : RUN apt-get update
+ ---> Using cache
+ ---> 51da675e4577
+Step 3 : RUN apt-get upgrade --force-yes -y
+ ---> Running in 22d5c186a415
+Reading package lists...
+Building dependency tree...
+The following packages will be upgraded:
+  apt apt-utils aptitude base-files bsdutils bzip2 coreutils dhcp3-client
+  dhcp3-common dpkg e2fslibs e2fsprogs gcc-4.4-base gnupg gpgv gzip ifupdown
+  initscripts insserv libblkid1 libbz2-1.0 libc-bin libc6 libcap2 libcomerr2
+  libdbus-1-3 libdevmapper1.02.1 libgcc1 libglib2.0-0 libpam-modules
+  libpam-runtime libpam0g libplymouth2 libpng12-0 libss2 libssl0.9.8
+  libstdc++6 libudev0 libusb-0.1-4 libuuid1 login lsb-base lsb-release mount
+  mountall ntpdate passwd perl-base plymouth procps python python-minimal
+  python2.6 python2.6-minimal rsyslog sudo sysv-rc sysvinit-utils tar tzdata
+  udev upstart ureadahead util-linux vim-common vim-tiny xkb-data
+67 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 33.3MB of archives.
+After this operation, 807kB disk space will be freed.
+Get:1 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libpam-modules 1.1.1-2ubuntu5.6 [392kB]
+Get:2 http://archive.ubuntu.com/ubuntu/ lucid-updates/main base-files 5.0.0ubuntu20.10.04.5 [70.3kB]
+Get:3 http://archive.ubuntu.com/ubuntu/ lucid-updates/main coreutils 7.4-2ubuntu3 [2907kB]
+Get:4 http://archive.ubuntu.com/ubuntu/ lucid-updates/main dpkg 1.15.5.6ubuntu4.9 [2252kB]
+Get:5 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libc-bin 2.11.1-0ubuntu7.13 [820kB]
+Get:6 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libc6 2.11.1-0ubuntu7.13 [4373kB]
+Get:7 http://archive.ubuntu.com/ubuntu/ lucid-updates/main gcc-4.4-base 4.4.3-4ubuntu5.1 [118kB]
+Get:8 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libgcc1 1:4.4.3-4ubuntu5.1 [45.1kB]
+Get:9 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libstdc++6 4.4.3-4ubuntu5.1 [340kB]
+Get:10 http://archive.ubuntu.com/ubuntu/ lucid-updates/main tzdata 2014e-0ubuntu0.10.04 [745kB]
+Get:11 http://archive.ubuntu.com/ubuntu/ lucid-updates/main e2fslibs 1.41.11-1ubuntu2.1 [144kB]
+Get:12 http://archive.ubuntu.com/ubuntu/ lucid-updates/main e2fsprogs 1.41.11-1ubuntu2.1 [808kB]
+Get:13 http://archive.ubuntu.com/ubuntu/ lucid-updates/main gzip 1.3.12-9ubuntu1.1 [107kB]
+Get:14 http://archive.ubuntu.com/ubuntu/ lucid-updates/main login 1:4.1.4.2-1ubuntu2.2 [324kB]
+Get:15 http://archive.ubuntu.com/ubuntu/ lucid-updates/main mount 2.17.2-0ubuntu1.10.04.2 [183kB]
+Get:16 http://archive.ubuntu.com/ubuntu/ lucid-updates/main perl-base 5.10.1-8ubuntu2.4 [1084kB]
+Get:17 http://archive.ubuntu.com/ubuntu/ lucid-updates/main tar 1.22-2ubuntu1 [390kB]
+Get:18 http://archive.ubuntu.com/ubuntu/ lucid-updates/main insserv 1.12.0-14ubuntu0.2 [70.5kB]
+Get:19 http://archive.ubuntu.com/ubuntu/ lucid-updates/main sysvinit-utils 2.87dsf-4ubuntu17.5 [118kB]
+Get:20 http://archive.ubuntu.com/ubuntu/ lucid-updates/main sysv-rc 2.87dsf-4ubuntu17.5 [79.8kB]
+Get:21 http://archive.ubuntu.com/ubuntu/ lucid-updates/main lsb-base 4.0-0ubuntu8.1 [25.8kB]
+Get:22 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libpam0g 1.1.1-2ubuntu5.6 [126kB]
+Get:23 http://archive.ubuntu.com/ubuntu/ lucid-updates/main passwd 1:4.1.4.2-1ubuntu2.2 [953kB]
+Get:24 http://archive.ubuntu.com/ubuntu/ lucid-updates/main initscripts 2.87dsf-4ubuntu17.5 [75.6kB]
+Get:25 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libdbus-1-3 1.2.16-2ubuntu4.7 [144kB]
+Get:26 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libudev0 151-12.3 [121kB]
+Get:27 http://archive.ubuntu.com/ubuntu/ lucid-updates/main ifupdown 0.6.8ubuntu29.2 [62.1kB]
+Get:28 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libglib2.0-0 2.24.1-0ubuntu2 [1123kB]
+Get:29 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libusb-0.1-4 2:0.1.12-14ubuntu0.2 [22.0kB]
+Get:30 http://archive.ubuntu.com/ubuntu/ lucid-updates/main procps 1:3.2.8-1ubuntu4.3 [249kB]
+Get:31 http://archive.ubuntu.com/ubuntu/ lucid-updates/main util-linux 2.17.2-0ubuntu1.10.04.2 [572kB]
+Get:32 http://archive.ubuntu.com/ubuntu/ lucid-updates/main udev 151-12.3 [464kB]
+Get:33 http://archive.ubuntu.com/ubuntu/ lucid-updates/main plymouth 0.8.2-2ubuntu2.2 [124kB]
+Get:34 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libpng12-0 1.2.42-1ubuntu2.5 [181kB]
+Get:35 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libplymouth2 0.8.2-2ubuntu2.2 [101kB]
+Get:36 http://archive.ubuntu.com/ubuntu/ lucid-updates/main mountall 2.15.3 [56.1kB]
+Get:37 http://archive.ubuntu.com/ubuntu/ lucid-updates/main upstart 0.6.5-8 [313kB]
+Get:38 http://archive.ubuntu.com/ubuntu/ lucid-updates/main bsdutils 1:2.17.2-0ubuntu1.10.04.2 [83.4kB]
+Get:39 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libssl0.9.8 0.9.8k-7ubuntu8.19 [986kB]
+Get:40 http://archive.ubuntu.com/ubuntu/ lucid-updates/main python2.6 2.6.5-1ubuntu6.3 [2542kB]
+Get:41 http://archive.ubuntu.com/ubuntu/ lucid-updates/main python2.6-minimal 2.6.5-1ubuntu6.3 [1478kB]
+Get:42 http://archive.ubuntu.com/ubuntu/ lucid-updates/main bzip2 1.0.5-4ubuntu0.2 [50.4kB]
+Get:43 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libbz2-1.0 1.0.5-4ubuntu0.2 [46.8kB]
+Get:44 http://archive.ubuntu.com/ubuntu/ lucid-updates/main python 2.6.5-0ubuntu1.1 [148kB]
+Get:45 http://archive.ubuntu.com/ubuntu/ lucid-updates/main python-minimal 2.6.5-0ubuntu1.1 [21.2kB]
+Get:46 http://archive.ubuntu.com/ubuntu/ lucid-updates/main apt 0.7.25.3ubuntu9.15 [1829kB]
+Get:47 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libuuid1 2.17.2-0ubuntu1.10.04.2 [62.2kB]
+Get:48 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libblkid1 2.17.2-0ubuntu1.10.04.2 [112kB]
+Get:49 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libcomerr2 1.41.11-1ubuntu2.1 [51.4kB]
+Get:50 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libpam-runtime 1.1.1-2ubuntu5.6 [116kB]
+Get:51 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libss2 1.41.11-1ubuntu2.1 [56.8kB]
+Get:52 http://archive.ubuntu.com/ubuntu/ lucid-updates/main apt-utils 0.7.25.3ubuntu9.15 [247kB]
+Get:53 http://archive.ubuntu.com/ubuntu/ lucid-updates/main aptitude 0.4.11.11-1ubuntu10lucid1 [1562kB]
+Get:54 http://archive.ubuntu.com/ubuntu/ lucid-updates/main dhcp3-client 3.1.3-2ubuntu3.5 [276kB]
+Get:55 http://archive.ubuntu.com/ubuntu/ lucid-updates/main dhcp3-common 3.1.3-2ubuntu3.5 [336kB]
+Get:56 http://archive.ubuntu.com/ubuntu/ lucid-updates/main gpgv 1.4.10-2ubuntu1.6 [227kB]
+Get:57 http://archive.ubuntu.com/ubuntu/ lucid-updates/main gnupg 1.4.10-2ubuntu1.6 [1127kB]
+Get:58 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libcap2 1:2.17-2ubuntu1.1 [12.7kB]
+Get:59 http://archive.ubuntu.com/ubuntu/ lucid-updates/main libdevmapper1.02.1 2:1.02.39-1ubuntu4.1 [82.6kB]
+Get:60 http://archive.ubuntu.com/ubuntu/ lucid-updates/main lsb-release 4.0-0ubuntu8.1 [26.9kB]
+Get:61 http://archive.ubuntu.com/ubuntu/ lucid-updates/main ntpdate 1:4.2.4p8+dfsg-1ubuntu2.1 [72.2kB]
+Get:62 http://archive.ubuntu.com/ubuntu/ lucid-updates/main rsyslog 4.2.0-2ubuntu8.1 [295kB]
+Get:63 http://archive.ubuntu.com/ubuntu/ lucid-updates/main sudo 1.7.2p1-1ubuntu5.7 [328kB]
+Get:64 http://archive.ubuntu.com/ubuntu/ lucid-updates/main ureadahead 0.100.0-4.1.3 [25.4kB]
+Get:65 http://archive.ubuntu.com/ubuntu/ lucid-updates/main vim-tiny 2:7.2.330-1ubuntu3.1 [400kB]
+Get:66 http://archive.ubuntu.com/ubuntu/ lucid-updates/main vim-common 2:7.2.330-1ubuntu3.1 [175kB]
+Get:67 http://archive.ubuntu.com/ubuntu/ lucid-updates/main xkb-data 1.8-1ubuntu8.1~10.04.1 [447kB]
+[91mdebconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+[0m[91mdebconf: falling back to frontend: Readline
+[0m[91mdebconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (@INC contains: /etc/perl /usr/local/lib/perl/5.10.1 /usr/local/share/perl/5.10.1 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.10 /usr/share/perl/5.10 /usr/local/lib/site_perl .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7, <> line 67.)
+debconf: falling back to frontend: Teletype
+[0m[91mdpkg-preconfigure: unable to re-open stdin: 
+[0mFetched 33.3MB in 1min 19s (421kB/s)
+(Reading database ... 9129 files and directories currently installed.)
+Preparing to replace libpam-modules 1.1.1-2ubuntu2 (using .../libpam-modules_1.1.1-2ubuntu5.6_amd64.deb) ...
+[91mdebconf: unable to initialize frontend: Dialog
+[0m[91mdebconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+[0m[91mdebconf: unable to initialize frontend: Readline
+[0m[91mdebconf: (Can't locate Term/ReadLine.pm in @INC (@INC contains: /etc/perl /usr/local/lib/perl/5.10.1 /usr/local/share/perl/5.10.1 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.10 /usr/share/perl/5.10 /usr/local/lib/site_perl .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+[0mUnpacking replacement libpam-modules ...
+Setting up libpam-modules (1.1.1-2ubuntu5.6) ...
+
+(Reading database ... 9130 files and directories currently installed.)
+Preparing to replace base-files 5.0.0ubuntu20 (using .../base-files_5.0.0ubuntu20.10.04.5_amd64.deb) ...
+Unpacking replacement base-files ...
+Setting up base-files (5.0.0ubuntu20.10.04.5) ...
+Installing new version of config file /etc/issue ...
+Installing new version of config file /etc/issue.net ...
+Installing new version of config file /etc/lsb-release ...
+
+(Reading database ... 9130 files and directories currently installed.)
+Preparing to replace coreutils 7.4-2ubuntu2 (using .../coreutils_7.4-2ubuntu3_amd64.deb) ...
+Unpacking replacement coreutils ...
+Setting up coreutils (7.4-2ubuntu3) ...
+(Reading database ... 9130 files and directories currently installed.)
+Preparing to replace dpkg 1.15.5.6ubuntu4 (using .../dpkg_1.15.5.6ubuntu4.9_amd64.deb) ...
+Unpacking replacement dpkg ...
+Setting up dpkg (1.15.5.6ubuntu4.9) ...
+
+(Reading database ... 9130 files and directories currently installed.)
+Preparing to replace libc-bin 2.11.1-0ubuntu7 (using .../libc-bin_2.11.1-0ubuntu7.13_amd64.deb) ...
+Unpacking replacement libc-bin ...
+Setting up libc-bin (2.11.1-0ubuntu7.13) ...
+
+(Reading database ... 9130 files and directories currently installed.)
+Preparing to replace libc6 2.11.1-0ubuntu7 (using .../libc6_2.11.1-0ubuntu7.13_amd64.deb) ...
+[91mdebconf: unable to initialize frontend: Dialog
+[0m[91mdebconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+[0m[91mdebconf: unable to initialize frontend: Readline
+[0m[91mdebconf: (Can't locate Term/ReadLine.pm in @INC (@INC contains: /etc/perl /usr/local/lib/perl/5.10.1 /usr/local/share/perl/5.10.1 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.10 /usr/share/perl/5.10 /usr/local/lib/site_perl .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+[0m[91m[: 399: Illegal number: 3.14-1-amd64
+[0m[91m/var/lib/dpkg/tmp.ci/preinst: 399: [0m[91marithmetic expression: expecting EOF: "3.14-1-amd64"
+[0m[91mdpkg: error processing /var/cache/apt/archives/libc6_2.11.1-0ubuntu7.13_amd64.deb (--unpack):
+ subprocess new pre-installation script returned error exit status 2
+[0m[91mErrors were encountered while processing:
+[0m[91m /var/cache/apt/archives/libc6_2.11.1-0ubuntu7.13_amd64.deb
+[0m[91mE: [0m[91mSub-process /usr/bin/dpkg returned an error code (1)
+[0m
