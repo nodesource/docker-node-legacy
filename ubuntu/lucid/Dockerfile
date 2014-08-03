@@ -1,8 +1,13 @@
 FROM ubuntu:lucid
 
 # Setup NodeSource Official PPA
-RUN apt-get update
-RUN apt-get install libc6 --force-yes -y
-RUN apt-get install curl --force-yes -y
+RUN apt-get update && \
+    apt-get install -y --force-yes \
+      curl \
+      apt-transport-https \
+      lsb-release \
+      build-essential \
+      python-all
+
 RUN curl -sL https://deb.nodesource.com/setup | bash -
 RUN apt-get install nodejs --force-yes -y

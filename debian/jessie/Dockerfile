@@ -3,7 +3,6 @@ MAINTAINER William Blankenship <william.jblankenship@gmail.com>
 
 # Setup NodeSource Official PPA
 RUN apt-get update && \
-    apt-get upgrade -y --force-yes && \
     apt-get install -y --force-yes \
         curl \
         apt-transport-https \
