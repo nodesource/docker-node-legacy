@@ -19,3 +19,5 @@ We currently support the following distrubtions by tag:
   * Sid
   * Wheezy
   * Jessie
+
+Following after the node.js image maintained by the docker team, _nodesource/node:latest_ is an alias to _nodesource/node:jessie_.
