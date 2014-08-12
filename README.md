@@ -1,6 +1,8 @@
 docker-node
 ===
 
+[![node](http://dockeri.co/image/wblankenship/node)](https://registry.hub.docker.com/u/wblankenship/node)
+
 Dockerfiles for building off of chirslea's N|S PPAs. Automated via docker.
 
 # Structure
