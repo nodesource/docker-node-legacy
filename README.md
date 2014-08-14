@@ -11,7 +11,7 @@ We have a folder setup for each distrubtion of linux, inside each folder you wil
 * **Ubuntu 12.04 LTS** (Precise Pangolin) - `docker pull nodesource/node:precise`
 * **Ubuntu 14.04 LTS** (Trusty Tahr) - `docker pull nodesource/node:trusty`
 
-# Debian-based images
+## Debian-based images
 
 * **Debian 7 / stable** (wheezy) - `docker pull nodesource/node:wheezy`
 * **Debian testing** (jessie) - `docker pull nodesource/node:jessie`
