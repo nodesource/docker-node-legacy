@@ -2,7 +2,7 @@
 
 Dockerfiles for building Debian and Ubuntu images with the [NodeSource Node.js](https://github.com/nodesource/distributions) binaries baked in. Automated via Docker Hub: <https://registry.hub.docker.com/u/nodesource/node/>.
 
-[![node](http://dockeri.co/image/wblankenship/node)](https://registry.hub.docker.com/u/wblankenship/node)
+[![node](http://dockeri.co/image/nodesource/node)](https://registry.hub.docker.com/u/nodesource/node)
 
 # Structure
 
