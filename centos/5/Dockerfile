@@ -1,11 +1,11 @@
 FROM centos:centos5
-MAINTAINER William Blankenship <william.jblankenship@gmail.com>
+MAINTAINER William Blankenship <wblankenship@nodesource.com>
 
 # Setup NodeSource Official PPA
 RUN yum -y install curl
 RUN rpm -ivh http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm
-RUN yum -y update
 RUN curl -sL https://rpm.nodesource.com/setup | bash -
-RUN yum -y install nodejs
+RUN yum -y install python26 nodejs gcc-c++ make
+RUN rm /usr/bin/{python,python2} && ln /usr/bin/python2.6 /usr/bin/python && ln /usr/bin/python2.6 /usr/bin/python2
 RUN npm install -g node-gyp
-RUN node-gyp configure || echo ""
+RUN node-gyp configure
