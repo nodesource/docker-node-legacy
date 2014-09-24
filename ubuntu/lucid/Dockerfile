@@ -1,4 +1,5 @@
 FROM ubuntu:lucid
+MAINTAINER William Blankenship <wblankenship@nodesource.com>
 
 # Setup NodeSource Official PPA
 RUN apt-get update && \
