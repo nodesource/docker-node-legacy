@@ -1,5 +1,5 @@
 FROM debian:sid
-MAINTAINER William Blankenship <william.jblankenship@gmail.com>
+MAINTAINER William Blankenship <wblankenship@nodesource.com>
 
 # Setup NodeSource Official PPA
 RUN apt-get update && \
