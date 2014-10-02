@@ -19,6 +19,12 @@ We have a folder setup for each distrubtion of linux, inside each folder you wil
 * **Debian testing** (jessie) - `docker pull nodesource/node:jessie`
 * **Debian unstable** (sid) - `docker pull nodesource/node:sid`
 
+## RPM-Based images
+* **Fedora 20** (Heisenbug) - `docker pull nodesource/node:heisenbug`
+* **CentOS 5** - `docker pull nodesource/node:centos5`
+* **CentOS 6** - `docker pull nodesource/node:centos6`
+* **CentOS 7** - `docker pull nodesource/node:centos7`
+
 Following after the Node.js image maintained by the Docker team, _nodesource/node:latest_ is an alias to _nodesource/node:jessie_.
 
 `docker pull nodesource/node`
