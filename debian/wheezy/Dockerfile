@@ -19,10 +19,6 @@ RUN apt-get update \
  && apt-get install nodejs -y --force-yes \
  && rm -rf /var/lib/apt/lists/*
 
-RUN curl -sL https://deb.nodesource.com/setup | bash -
-RUN apt-get update
-RUN apt-get install nodejs -y --force-yes
-
 RUN npm install -g node-gyp \
  && npm cache clear
 
