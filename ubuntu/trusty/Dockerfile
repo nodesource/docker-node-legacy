@@ -2,17 +2,22 @@ FROM ubuntu:trusty
 MAINTAINER William Blankenship <wblankenship@nodesource.com>
 
 # Setup NodeSource Official PPA
-RUN apt-get update && \
-    apt-get install -y --force-yes \
-      curl \
-      apt-transport-https \
-      lsb-release \
-      build-essential \
-      python-all
+RUN apt-get update \
+ && apt-get install -y --force-yes \
+        curl \
+        apt-transport-https \
+        lsb-release \
+        build-essential \
+        python-all \
+ && rm -rf /var/lib/apt/lists/*
 
-RUN curl -sL https://deb.nodesource.com/setup | bash -
-RUN apt-get update
-RUN apt-get install nodejs -y --force-yes
+RUN apt-get update \
+ && curl -sL https://deb.nodesource.com/setup | bash - \
+ && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update \
+ && apt-get install nodejs -y --force-yes \
+ && rm -rf /var/lib/apt/lists/*
+
 RUN npm install -g node-gyp
-RUN apt-get install python-all -y --force-yes
 RUN node-gyp configure || echo ""
