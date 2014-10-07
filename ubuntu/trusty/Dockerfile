@@ -13,6 +13,8 @@ RUN apt-get update && \
 RUN curl -sL https://deb.nodesource.com/setup | bash -
 RUN apt-get update
 RUN apt-get install nodejs -y --force-yes
-RUN npm install -g node-gyp
-RUN apt-get install python-all -y --force-yes
+
+RUN npm install -g node-gyp \
+ && npm cache clear
+
 RUN node-gyp configure || echo ""
