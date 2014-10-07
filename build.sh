@@ -1,4 +1,5 @@
 #!/bin/bash
+opts=$1
 images=(
   "centos/5"
   "centos/6"
@@ -14,6 +15,6 @@ images=(
 
 for image in ${images[@]}; do
   echo -n "Starting ${image} build... "
-  xterm -hold -e bash -c "cd ${image};docker build --no-cache ." &
+  xterm -hold -title "${image}" -e bash -c "cd ${image};docker build ${opts} ." &
   echo "DONE!"
 done
