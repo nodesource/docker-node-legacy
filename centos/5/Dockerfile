@@ -2,7 +2,7 @@ FROM centos:centos5
 MAINTAINER William Blankenship <wblankenship@nodesource.com>
 
 # Setup NodeSource Official PPA
-RUN yum -y install curl
+RUN yum -y install curl git
 RUN rpm -ivh http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm
 RUN curl -sL https://rpm.nodesource.com/setup | bash -
 RUN yum -y install python26 nodejs gcc-c++ make

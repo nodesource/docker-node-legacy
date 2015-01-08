@@ -4,10 +4,11 @@ MAINTAINER William Blankenship <wblankenship@nodesource.com>
 # Setup NodeSource Official PPA
 RUN apt-get update && \
     apt-get install -y --force-yes \
-      curl \
       apt-transport-https \
-      lsb-release \
       build-essential \
+      curl \
+      git \
+      lsb-release \
       python-all
 
 RUN curl -sL https://deb.nodesource.com/setup | bash -
