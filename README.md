@@ -27,4 +27,8 @@ We have a folder setup for each distrubtion of linux, inside each folder you wil
 
 Following after the Node.js image maintained by the Docker team, _nodesource/node:latest_ is an alias to _nodesource/node:jessie_.
 
-`docker pull nodesource/node`
+`docker pull nodesource/node:latest`
+
+*NOTE*
+`docker pull nodesource/node` will download _all_ tags for the docker image, which is roughly 8GB. We urge you to pick a tag when downloading. Example: `docker pull nodesource/node:jessie`
+
