@@ -3,7 +3,9 @@ docker-node (depreciated)
 
 ### We now offer images with version pinning for node. Please follow the migration path to begin using these images.
 
-These images can be found [here](https://github.com/nodesource/docker-node). Note, they are currently only available for Debian flavor distributions.
+The new images can be found [here](https://github.com/nodesource/docker-node).
+
+The images in docker-node-legacy contain Node.js 0.10.32, and will not be updated. The new images have Node.js 0.10.30 through Node.js 0.12.0 and io.js versions 1.3.0 through io.js 1.5.1, available through individual tags.
 
 # Migration Path
 
