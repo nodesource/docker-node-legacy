@@ -1,4 +1,41 @@
-# docker-node
+docker-node (depreciated)
+===
+
+### We now offer images with version pinning for node. Please follow the migration path to begin using these images.
+
+The new images can be found [here](https://github.com/nodesource/docker-node).
+
+The images in docker-node-legacy contain Node.js 0.10.32, and will not be updated. The new images have Node.js 0.10.30 through Node.js 0.12.0 and io.js versions 1.3.0 through io.js 1.5.1, available through individual tags.
+
+# Migration Path
+
+### Step 1.
+
+Determine the version of node contained in the docker container you are using, for example:
+
+```text
+$ docker run -it nodesource/node:wheezy node -v`
+v0.10.32
+```
+
+### Step 2. 
+
+Use this version as the tag for your new image, for example:
+
+```text
+$ docker pull nodesource/wheezy:0.10.32
+```
+
+### (optional) Step 3.
+
+If you would like to determine the differences in packages between the images, you can run:
+
+```text
+$ docker run nodesource/node:wheezy dpkg --get-selections > old.log && docker run nodesource/wheezy:0.10.32 dpkg --get-selections > new.log && diff old.log new.log && rm old.log new.log
+```
+You should find that they are all near to identical.
+
+# docker-node (legacy)
 
 Dockerfiles for building Debian and Ubuntu images with the [NodeSource Node.js](https://github.com/nodesource/distributions) binaries baked in. Automated via Docker Hub: <https://registry.hub.docker.com/u/nodesource/node/>.
 
